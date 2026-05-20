@@ -1,0 +1,20 @@
+[
+  {
+    "AlarmName": "HighCPU-Backend",
+    "MetricName": "CPUUtilization",
+    "Namespace": "AWS/EC2",
+    "Threshold": 80,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "EvaluationPeriods": 2,
+    "Period": 60
+  },
+  {
+    "AlarmName": "ALB-5xx-Errors",
+    "MetricName": "HTTPCode_ELB_5XX_Count",
+    "Namespace": "AWS/ApplicationELB",
+    "Threshold": 10,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "EvaluationPeriods": 1,
+    "Period": 60
+  }
+]

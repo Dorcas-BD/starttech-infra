@@ -1,0 +1,24 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "properties": {
+        "region": "us-east-1",
+        "metrics": [["AWS/EC2", "CPUUtilization", "AutoScalingGroupName", "starttech-backend-asg"]],
+        "title": "EC2 CPU Utilization",
+        "period": 60,
+        "stat": "Average"
+      }
+    },
+    {
+      "type": "metric",
+      "properties": {
+        "region": "us-east-1",
+        "metrics": [["AWS/ApplicationELB", "RequestCount", "LoadBalancer", "starttech-alb"]],
+        "title": "ALB Request Count",
+        "period": 60,
+        "stat": "Sum"
+      }
+    }
+  ]
+}

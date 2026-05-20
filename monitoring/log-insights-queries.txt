@@ -1,0 +1,8 @@
+# Recent errors
+SOURCE '/starttech/backend' | fields @timestamp, @message | filter @message like /ERROR/ | sort @timestamp desc | limit 20
+
+# Request count by minute
+SOURCE '/starttech/backend' | fields @timestamp | stats count() as requests by bin(1m)
+
+# Slow requests
+SOURCE '/starttech/backend' | fields @timestamp, @message | filter @message like /latency/ | sort @timestamp desc
