@@ -1,0 +1,7 @@
+aws_region    = "us-east-1"
+project_name  = "starttech"
+environment   = "prod"
+vpc_cidr      = "10.0.0.0/16"
+instance_type = "t3.micro"
+key_name      = "starttech-key"
+account_id    = "734910191144"
